@@ -1,9 +1,6 @@
 EventMachine Async Bloc 
 =======================
 
-Overview
---------
-
 Massively simplify EventMachine code, especially in server-type apps by introducing
 chunks of "procedural" code in a green-thread-like manner, whilst actually being
 evented, and running above EventMachine's reactor.
