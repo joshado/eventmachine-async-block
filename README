@@ -1,7 +1,21 @@
  ** EventMachine Async Bloc ** 
- 
-First prize to whoever works out what to do without a README file.
-Bonus points for them if they then write the README file.
 
-TODO: Write a README
+Massively simplify EventMachine code, especially in server-type apps by introducing
+blocks of "procedural" in a green-thread-like manner, on top of eventmachine.
+
+Bourne mainly from frustration with dealing with callbacks / errbacks within callbacks
+it does simulate thread-like behaviour, except "thread" interruption occurs only when
+you enter a pseudo blocking (evented) function call. Hence you don't have to go nuts
+writing thread-safe data-structures as long as you're reasonably sensible about how
+you use them.
+
+Also, it meant I'd actually used callcc for something!
+
+ ** 
+ 
+First prize to whoever works out how to use without any more detail.
+Bonus points for adding detail here.
+
+TODO: Write a better README
+
 
