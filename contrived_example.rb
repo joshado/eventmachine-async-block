@@ -6,20 +6,6 @@ require 'thin'
 require 'async_block'
 require 'em-redis'
 
-class DeferrableBody
-  include EventMachine::Deferrable
-
-  def call(body)
-    body.each do |chunk|
-      @body_callback.call(chunk)
-    end
-  end
-
-  def each(&blk)
-    @body_callback = blk
-  end
-end
-
 class CakeOrDeath
   def initialize
     @redis = EM::Protocols::Redis.connect
