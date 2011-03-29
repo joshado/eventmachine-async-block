@@ -9,7 +9,6 @@ require 'em-redis'
 class CakeOrDeath
   def initialize
     @redis = EM::Protocols::Redis.connect
-    @@index = 0    
   end
   
   def redis_increment( key )
@@ -41,9 +40,7 @@ class CakeOrDeath
     end    
   end
 
-  def call( env )
-    index = (@@index += 1)
-  
+  def call( env )  
     procedural("HTTP Request Handler") {
       
       handle_request( env )
