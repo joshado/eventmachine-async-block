@@ -1,12 +1,15 @@
-h1. EventMachine Async Bloc 
+EventMachine Async Bloc 
+=======================
 
-h2. Overview
+Overview
+--------
 
 Massively simplify EventMachine code, especially in server-type apps by introducing
 chunks of "procedural" code in a green-thread-like manner, whilst actually being
 evented, and running above EventMachine's reactor.
 
-h2. Discussion
+Discussion
+----------
 
 Bourne mainly from frustration with dealing with callbacks / errbacks within callbacks
 it does simulate thread-like behaviour, except "thread" interruption occurs only when
@@ -22,7 +25,8 @@ Net::SSH within eventmachine with minimal patching (see net_ssh_over_em.rb).
 Just make sure you call procedural { ssh.loop } at some point so it thinks it's running it's
 event-loop.
 
-h2. And finally...
+And finally...
+--------------
 
 First prize to whoever works out how to use without any more detail.
 Bonus points for adding detail here.
@@ -30,8 +34,7 @@ Bonus points for adding detail here.
 Comments on a postcard, I may put more effort into describing / investigating behaviour and
 performance if people think it's useful and a good idea!
 
-h2. Future bits
-
 TODO: Write a better README
+
 
 
